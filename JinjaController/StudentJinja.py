@@ -15,13 +15,35 @@ apirouter = APIRouter(tags=["Student-Jinja"])
 
 templates = Jinja2Templates(directory="StudentTemplates")
 
+# HOME PAGE 
+
 @apirouter.get("/", response_class=HTMLResponse)
 def home(request:Request):
     return templates.TemplateResponse("home.html",{"request":request})
 
+@apirouter.get("/Student", name="student_home", response_class=HTMLResponse)
+def get_student_home(request:Request):
+    return templates.TemplateResponse("studenthome.html",{"request":request})
+
+# STUDENT HOME PAGE (REQUEST)
+
 @apirouter.get("/Studentform", name="student_form", response_class=HTMLResponse)
 def get_student_form(request:Request):
     return templates.TemplateResponse("studentform.html",{"request":request})
+
+@apirouter.get("/Studentupdate", name="student_update", response_class=HTMLResponse)
+def get_student_update(request:Request):
+    return templates.TemplateResponse("Studentupdate.html",{"request":request})
+
+@apirouter.get("/Studentclass", name="student_class", response_class=HTMLResponse)
+def get_student_update(request:Request):
+    return templates.TemplateResponse("StudentClass.html",{"request":request})
+
+@apirouter.get("/Studentcontact", name="student_contact", response_class=HTMLResponse)
+def get_student_update(request:Request):
+    return templates.TemplateResponse("StudentContact.html",{"request":request})
+
+# STUDENT PAGE (RESPONSE)
 
 @apirouter.post("/submit", response_model=ResponseTo[StudentResponse])
 def create_Student_form(request:Request, form_data:StudentForm = Form(), dal: StudentDal = Depends(get_student_dal)):

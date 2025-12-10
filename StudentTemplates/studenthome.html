@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="top">
+        <div class="main">
+            <h1 class="h1">Student <br> Management</h1>
+        </div>
+        <div class="section">
+            <ul>
+                <li><a href="{{url_for('student_form')}}">Create Student</a></li>
+                <li><a href="{{url_for('student_update')}}">Student Update</a></li>
+                <li><a href="{{url_for('student_class')}}">Student Class Update</a></li>
+                <li><a href="{{url_for('student_contact')}}">Student Contact Update</a></li>
+                <li><a href="">Students Details</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="social-icons">
+        <div class="end">
+            <div class="follow">
+                <h4>Follow On</h4>
+            </div>
+            <div class="instagram">
+                <a href="www.instagram.com"><i id="icon" class="fab fa-instagram"></i></a>
+            </div>
+            <div class="facebook">
+                <a href="www.facebook.com"><i id="icon" class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class="twitter">
+                <a href="www.twitter.com"><i id="icon" class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-image: url("Photos/astronaut-wearing-spacesuit.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        
+    }
+
+    .main {
+        margin-top: 60px;
+        margin-left: 60px;
+    }
+
+    .section {
+        margin-top: 40px;
+        margin-left: 340px;
+    }
+
+    .h1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 70px;
+        color: #a542c8;
+        background-image: linear-gradient(45deg, #511263, #0c0b0c 50%, #278f1a 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(15, 15, 15);
+    }
+
+
+
+
+    .social-icons,
+    .end {
+        display: flex;
+        gap: 19px;
+        justify-content: flex-start;
+        padding: 20px;
+        position: relative;
+        bottom: 50px;
+
+    }
+
+    .follow {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 25.7px;
+        background-image: linear-gradient(45deg, #0a0a0a, #185327 50%, #0c0e0c 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        padding-left: 50px;
+
+    }
+
+    .end {
+        gap: 40px;
+
+    }
+
+    i {
+        font-size: 38.9px;
+    }
+
+    .facebook:hover {
+        transform: translateY(-3px);
+    }
+
+    .instagram:hover {
+        transform: translateY(-3px);
+    }
+
+    .twitter:hover {
+        transform: translateY(-3px);
+    }
+
+    .top {
+        display: flex;
+        padding-top: 30px;
+        margin: 20px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        padding: 12px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 16.8px;
+
+    }
+
+     li {
+        display: block;
+        background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
+        margin: 10px;
+        padding: 18px 26px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        border-radius: 30px;
+        color: aliceblue;
+        cursor: pointer;
+        position: relative;
+
+    }
+
+    li:hover {
+        transform: translateY(-3.6px);
+        box-shadow: 0 8px 20px rgba(25, 25, 31, 0.952);
+    }
+</style>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error</title>
+</head>
+
+<body>
+    <div class="top">
+        <div class="section">
+          <ul>
+            <li><a href="{{url_for('student_home')}}">Student Home</a></li>
+            <li><a href="{{url_for('student_form')}}">Create Student</a></li>
+            <li><a href="{{url_for('student_search')}}">Student Search</a></li>
+          </ul>
+        </div>
+      </div>
+  <div class="main">
+    <div class="head">
+      <h1 class="h1">Sorry !<br>Student ID Couldn't Found</h1>
+      <h1 class="h2">Please Enter Correct ID</h1>
+    </div>
+  
+</body>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+
+  }
+
+  body {
+    background-image: url("Photos/astronaut-wearing-spacesuit\ new.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+  }
+  .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  .h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 70px;
+    color: #a542c8;
+    background-image: linear-gradient(45deg, #511263, #0c0b0c 50%, #278f1a 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin-top: 60px;
+    margin-left: 60px;
+  }
+
+  .h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: #a542c8;
+    background-image: linear-gradient(45deg, #1c3d08, #0c0b0c 50%, #5e197e 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    margin-top: 20px;
+    margin-left: 60px;
+  }
+
+  .top {
+    display: flex;
+    justify-content: end;
+    margin: 20px;
+
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    padding: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 10.8px;
+
+  }
+
+  li {
+    display: block;
+    background-color: rgb(156, 176, 194);
+    margin: 10px;
+    padding: 13px 18px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border-radius: 30px;
+    color: aliceblue;
+    cursor: pointer;
+    position: relative;
+
+  }
+
+  li:hover {
+    transform: translateY(-3.6px);
+    box-shadow: 0 8px 20px rgba(25, 25, 31, 0.952);
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(15, 15, 15);
+  }
+
+</style>
+
+</html>

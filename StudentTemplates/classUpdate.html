@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Class Update</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+  <div class="top">
+    <div class="section">
+      <ul>
+        <li><a href="{{url_for('student_home')}}">Student Home</a></li>
+        <li><a href="{{url_for('student_update')}}">Student Update</a></li>
+        <li><a href="{{url_for('student_class')}}">Student Class Update</a></li>
+        <li><a href="{{url_for('student_contact')}}">Student Contact Update</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="main">
+
+    <div class="head">
+      <h1 class="h1">Student class<br> Updated Details</h1>
+      <h1 class="h2">Updated Successfully</h1>
+    </div>
+    <div class="Details">
+      <table>
+
+        <tr>
+          <td class="one">ID</td>
+          <td class="two">{{submit.id}}</td>
+        </tr>
+        <tr>
+          <td class="one">NAME</td>
+          <td class="two">{{submit.name}}</td>
+        </tr>
+        <tr>
+          <td class="one">EMAIL</td>
+          <td class="two">{{submit.email}}</td>
+        </tr>
+        <tr>
+          <td class="one">DOB</td>
+          <td class="two">{{submit.date_of_birth}}</td>
+        </tr>
+        <tr>
+          <td class="one">BLOOD GROUP</td>
+          <td class="two">{{submit.blood_group}}</td>
+        </tr>
+        <tr>
+          <td class="one">CLASS</td>
+          <td class="two">{{submit.class_Std}}</td>
+        </tr>
+        <tr>
+          <td class="one">CONTACT NUMBER</td>
+          <td class="two">{{submit.primary_contact_number}}</td>
+        </tr>
+        <tr>
+          <td class="one">CREATED TIME</td>
+          <td class="two">{{submit.created_at}}</td>
+        </tr>
+        <tr>
+          <td class="one">UPDATED TIME</td>
+          <td class="two">{{submit.updated_at}}</td>
+        </tr>
+
+      </table>
+    </div>
+  </div>
+  <div class="social-icons">
+    <div class="end">
+      <div class="follow">
+        <h4>Follow On</h4>
+      </div>
+      <div class="instagram">
+        <a href="www.instagram.com"><i id="icon" class="fab fa-instagram"></i></a>
+      </div>
+      <div class="facebook">
+        <a href="www.facebook.com"><i id="icon" class="fab fa-facebook-f"></i></a>
+      </div>
+      <div class="twitter">
+        <a href="www.twitter.com"><i id="icon" class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+</body>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+
+  }
+
+  body {
+    background-image: url("Photos/astronaut-wearing-spacesuit\ new.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+  }
+
+  table {
+    margin: 50px;
+    /* width: 100%; */
+    border-collapse: separate;
+    /* box-shadow: 5rem; */
+    min-width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+    table-layout: fixed;
+    border-radius: 20px;
+
+  }
+
+
+  td {
+    border: 1px solid #186e15;
+    padding: 8px;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 14px;
+  }
+
+
+  td {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 16.5px;
+  }
+
+  .one {
+    cursor: pointer;
+  }
+
+  .two {
+    cursor: pointer;
+  }
+
+  .two:hover {
+    background-color: #76c45e;
+    color: rgb(10, 10, 10);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(25, 25, 31, 0.952);
+  }
+
+  .one:hover {
+    background-color: #aa4fa2;
+    color: rgb(10, 10, 10);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(25, 25, 31, 0.952);
+
+  }
+
+  table {
+    box-shadow: 0 8px 20px rgba(25, 25, 31, 0.952);
+  }
+
+  .top {
+    display: flex;
+    justify-content: end;
+    margin: 20px;
+
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    padding: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 10.8px;
+
+  }
+
+  li {
+    display: block;
+    background-color: rgb(156, 176, 194);
+    margin: 10px;
+    padding: 13px 18px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border-radius: 30px;
+    color: aliceblue;
+    cursor: pointer;
+    position: relative;
+
+  }
+
+  li:hover {
+    transform: translateY(-3.6px);
+    box-shadow: 0 8px 20px rgba(25, 25, 31, 0.952);
+  }
+
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+  .h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 70px;
+    color: #a542c8;
+    background-image: linear-gradient(45deg, #511263, #0c0b0c 50%, #278f1a 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin-top: 60px;
+    margin-left: 60px;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(15, 15, 15);
+  }
+
+  .social-icons,
+  .end {
+    display: flex;
+    gap: 19px;
+    justify-content: flex-start;
+    padding: 20px;
+    position: relative;
+    bottom: 50px;
+
+  }
+
+  .follow {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 25.7px;
+    background-image: linear-gradient(45deg, #0a0a0a, #185327 50%, #0c0e0c 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding-left: 50px;
+
+  }
+
+  .end {
+    gap: 40px;
+
+  }
+
+  i {
+    font-size: 38.9px;
+  }
+
+  .facebook:hover {
+    transform: translateY(-3px);
+  }
+
+  .instagram:hover {
+    transform: translateY(-3px);
+  }
+
+  .twitter:hover {
+    transform: translateY(-3px);
+  }
+
+  .h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: #a542c8;
+    background-image: linear-gradient(45deg, #1c3d08, #0c0b0c 50%, #5e197e 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-left: 60px;
+  }
+</style>
+
+</html>
